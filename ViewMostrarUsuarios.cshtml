@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PracticaFormulario.ViewModel.FormViewModel>
+@{
+    ViewBag.Title = "ViewMostrarUsuarios";
+    Layout = "~/Views/Shared/VistaGlobal.cshtml";
+}
+
+<h2>Tabla de todos los usuarios</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Pass</th>
+            <th>Genero</th>
+            <th>Fecha_Nac</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Email</td>
+                <td>@item.Pass</td>
+                <td>@item.Genero</td>
+                <td>@item.Fecha_Nac</td>
+           
+            </tr>
+        }
+    </tbody>
+</table>
